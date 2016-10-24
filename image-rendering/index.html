@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width">
+<title>image-rendering</title>
+<style>
+.title {
+  font-size: 16px;
+  margin: 10px 0;
+  font-weight: bold;
+}
+.group {
+  display: table;
+  width: 100%;
+  margin-bottom: 20px;
+}
+.item {
+  display: table-cell;
+  text-align: center;
+}
+img.auto {
+  image-rendering: auto;
+}
+img.crisp-edges {
+  image-rendering: crisp-edges;
+}
+img.pixelated {
+  image-rendering: pixelated;
+}
+</style>
+</head>
+<body>
+
+<div class="group">
+  <div class="item">
+    <div class="title">
+      image-rendering:
+      <select id="toggler">
+        <option value="auto">auto</option>
+        <option value="crisp-edges">crisp-edges</option>
+        <option value="pixelated">pixelated</option>
+      </select>
+      ;
+    </div>
+    <img src="./img/dot.png" alt="" width="100">
+    <img src="./img/dot.png" alt="" width="56">
+    <img src="./img/dot.png" alt="" width="156">
+    <hr>
+    <img src="./img/g.jpg" alt="" width="56">
+    <img src="./img/g.jpg" alt="" width="100">
+    <img src="./img/g.jpg" alt="" width="156">
+  </div>
+</div>
+
+<script>
+var toggler = document.getElementById('toggler');
+var img = document.querySelectorAll('.item > img');
+toggler.addEventListener('change', function(e){
+  for (var i=0; i<img.length; i++) {
+    img[i].style.imageRendering = this.value;
+  }
+}, false);
+</script>
+
+</body>
+</html>

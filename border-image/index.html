@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width">
+<title>border-image</title>
+<style>
+.border {
+  box-sizing: border-box;
+  width: 170px;
+  height: 170px;
+  border-style: solid;
+  border-width: 30px 30px 30px 30px;
+  border-image-source:  url(./img/bg.png);
+  border-image-width: 30px 30px 30px 30px;
+  border-image-slice: 30 30 30 30;
+  border-image-repeat: stretch;
+  background-color: snow;
+}
+</style>
+</head>
+<body>
+
+<div>
+border-image-repeat:
+<select id="toggler">
+<option value="stretch">stretch</option>
+<option value="repeat">repeat</option>
+<option value="round">round</option>
+<option value="space">space</option>
+</select>
+;
+</div>
+
+<div class="border">
+  The quick brown fox jumps over the lazy dog.
+</div>
+
+<hr>
+
+<img src="./img/bg.png" alt="">
+
+<script>
+var toggler = document.getElementById('toggler');
+var border = document.querySelector('.border');
+toggler.addEventListener('change', function(e){
+  border.style.borderImageRepeat = this.value;
+}, false);
+</script>
+</body>
+</html>

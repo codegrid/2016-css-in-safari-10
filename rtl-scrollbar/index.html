@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width">
+<title>rtl</title>
+<style>
+div {
+  width: 100%;
+  height: 40px;
+  overflow: scroll;
+  border: 1px solid #000;
+  margin-bottom: 10px;
+}
+.ltr {
+  direction: ltr;
+}
+.rtl {
+  direction: rtl;
+}
+</style>
+</head>
+<body>
+
+<h2>direction: ltr;</h2>
+
+<div class="ltr">
+  The quick brown fox jumps over the lazy dog.
+  The quick brown fox jumps over the lazy dog.
+  The quick brown fox jumps over the lazy dog.
+</div>
+
+<textarea class="ltr" cols="30" rows="3">
+The quick brown fox jumps over the lazy dog.
+The quick brown fox jumps over the lazy dog.
+The quick brown fox jumps over the lazy dog.
+The quick brown fox jumps over the lazy dog.
+</textarea>
+
+<select class="ltr" multiple>
+  <option>item 1</option>
+  <option>item 2</option>
+  <option>item 3</option>
+  <option>item 4</option>
+  <option>item 5</option>
+  <option>item 1</option>
+  <option>item 2</option>
+  <option>item 3</option>
+  <option>item 4</option>
+  <option>item 5</option>
+</select>
+
+<h2>direction: rtl;</h2>
+
+<div class="rtl">
+  The quick brown fox jumps over the lazy dog.
+  The quick brown fox jumps over the lazy dog.
+  The quick brown fox jumps over the lazy dog.
+</div>
+
+<textarea class="rtl" cols="30" rows="3">
+The quick brown fox jumps over the lazy dog.
+The quick brown fox jumps over the lazy dog.
+The quick brown fox jumps over the lazy dog.
+The quick brown fox jumps over the lazy dog.
+</textarea>
+
+<select class="rtl" multiple>
+  <option>item 1</option>
+  <option>item 2</option>
+  <option>item 3</option>
+  <option>item 4</option>
+  <option>item 5</option>
+  <option>item 1</option>
+  <option>item 2</option>
+  <option>item 3</option>
+  <option>item 4</option>
+  <option>item 5</option>
+</select>
+
+</body>
+</html>
